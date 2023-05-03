@@ -45,10 +45,10 @@ For complete examples, please see filelists/miyu_train.txt and filelists/miyu_va
 
 ## Preprocess
 ```sh
-python preprocess.py --filelists path/to/filelist_train.txt path/to/filelist_val.txt
+python preprocess.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
 ```
 ```sh
-python emotion_extract.py --filelists filelists/train.txt filelists/val.txt
+python emotion_extract.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
 ```
 Edit "training_files" and "validation_files" in configs/config.json
 
