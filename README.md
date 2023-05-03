@@ -52,6 +52,7 @@ dataset/001.wav|10|こんにちは。
 python preprocess.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
 ```
 ```sh
+# 감성 임베딩을 추출하세요. 이렇게 하면 각 wav 파일에 대해 *.emo.npy 파일이 생성됩니다.
 python emotion_extract.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
 ```
 configs/config.json" 파일의 "training_files" 및 "validation_files"을 수정하세요.
