@@ -1,7 +1,8 @@
 text cleaner from https://github.com/CjangCjengh/vits
 
-original repo: https://github.com/jaywalnut310/vits
-original repo: https://github.com/SayaSS/vits-finetuning.git
+original repo1: https://github.com/jaywalnut310/vits
+
+original repo2: https://github.com/SayaSS/vits-finetuning.git
 
 emotion-vits repo: https://github.com/innnky/emotional-vits.git
 
