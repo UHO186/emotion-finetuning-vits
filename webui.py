@@ -111,7 +111,6 @@ if __name__ == '__main__':
                     gr.inputs.Slider(label="noise_scale", minimum=0.1, maximum=1.0, step=0.1, value=0.6),
                     gr.inputs.Slider(label="noise_scale_w", minimum=0.1, maximum=1.0, step=0.1, value=0.668),
                     gr.inputs.Slider(label="length_scale", minimum=0.1, maximum=2.0, step=0.1, value=1.0),
-                    gr.inputs.Dropdown(label="Emotion", choices=list(emotion_dict.keys())),
                     gr.inputs.Number(label="speaker_id", value=10)],
             outputs=[gr.outputs.Textbox(label="Output Message"), gr.outputs.Audio(label="Output Audio")],
             allow_flagging=False,
@@ -125,6 +124,7 @@ if __name__ == '__main__':
             iface.launch(share=True)
         else:
             iface.launch()
+
     with gr.Interface(
             fn=tts_fn,
             inputs=[gr.inputs.Textbox(label="Text", lines=5, value="今日はいい天気ですね。"),
@@ -132,7 +132,7 @@ if __name__ == '__main__':
                     gr.inputs.Slider(label="noise_scale_w", minimum=0.1, maximum=1.0, step=0.1, value=0.668),
                     gr.inputs.Slider(label="length_scale", minimum=0.1, maximum=2.0, step=0.1, value=1.0),
                     gr.inputs.Number(label="Emotion ID", min_value=0, max_value=len(emotion_dict)-1, step=1, value=0),
-                    gr.inputs.Number(label="speaker_id", value=10)],
+                    gr.inputs.Number(label="speaker_id", value=10)], 
             outputs=[gr.outputs.Textbox(label="Output Message"), gr.outputs.Audio(label="Output Audio")],
             allow_flagging=False,
             layout="vertical",
@@ -144,8 +144,9 @@ if __name__ == '__main__':
                 iface.share()
             else:
                 iface.launch()
-            elif args.colab:
-                iface.launch(inline=False)
-            else:
-                iface.launch()
-   
+        elif args.colab:
+            iface.launch(inline=False)
+        else:
+            iface.launch()
+                   
+
