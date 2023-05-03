@@ -3,6 +3,9 @@ import argparse
 import utils
 import commons
 import torch
+import sys
+import utils
+import argparse
 import gradio as gr
 import webbrowser
 from models import SynthesizerTrn
@@ -15,6 +18,17 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("asyncio").setLevel(logging.WARNING)
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--arg1', type=str, default='configs/vtubers.json', help='path to json file')
+parser.add_argument('--arg2', type=str, default='nene_final.pth', help='path to checkpoint')
+parser.add_argument('--arg3', type=str, default='all_emotions.npy', help='path to emotion file')
+args = parser.parse_args()
+
+json_file = args.arg1
+checkpoint = args.arg2
+emotion_file = args.arg3
+
+
 def get_text(text, hps):
     text_norm= text_to_sequence(text, hps.data.text_cleaners)
     if hps.data.add_blank:
@@ -22,19 +36,31 @@ def get_text(text, hps):
     text_norm = LongTensor(text_norm)
     return text_norm
 
+hps = utils.get_hparams_from_file(json_file)
+net_g = SynthesizerTrn(
+    len(symbols),
+    hps.data.filter_length // 2 + 1,
+    hps.train.segment_size // hps.data.hop_length,
+    n_speakers=hps.data.n_speakers,
+    **hps.model)
+_ = net_g.eval()
+
+_ = utils.load_checkpoint(checkpoint, net_g, None)
+all_emotions = np.load(emotion_file)
+
 def create_tts_fn(net_g_ms):
-    def tts_fn(text, noise_scale, noise_scale_w, length_scale, speaker_id):
+    def tts_fn(text, noise_scale, noise_scale_w, length_scale, emotion_id, speaker_id):
         text = text.replace('\n', ' ').replace('\r', '').replace(" ", "")
         stn_tst= get_text(text, hps_ms)
         with no_grad():
             x_tst = stn_tst.unsqueeze(0).to(device)
             x_tst_lengths = LongTensor([stn_tst.size(0)]).to(device)
             sid = LongTensor([speaker_id]).to(device)
+            emotion = emotion_dict[list(emotion_dict.keys())[emotion_id]]
             audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=noise_scale, noise_scale_w=noise_scale_w,
-                                   length_scale=length_scale)[0][0, 0].data.cpu().float().numpy()
+                                   length_scale=length_scale, emotion=emotion)[0][0, 0].data.cpu().float().numpy()
         return "Success", (22050, audio)
     return tts_fn
-
 
 download_audio_js = """
 () =>{{
@@ -79,29 +105,47 @@ if __name__ == '__main__':
     utils.load_checkpoint(args.model, net_g_ms, None)
     _ = net_g_ms.eval().to(device)
     models.append((net_g_ms, create_tts_fn(net_g_ms,)))
-    with gr.Blocks() as app:
-        with gr.Tabs():
-            for (net_g_ms, tts_fn) in models:
-                with gr.TabItem(args.model):
-                    with gr.Row():
-                        with gr.Column():
-                            input_text = gr.Textbox(label="Text",
-                                                    lines=5, value="今日はいい天気ですね。",
-                                                    elem_id=f"input-text")
-                            btn = gr.Button(value="Generate", variant="primary")
-                            sid = gr.Number(label="speaker_id", value=10)
-                            with gr.Row():
-                                ns = gr.Slider(label="noise_scale", minimum=0.1, maximum=1.0, step=0.1, value=0.6,
-                                               interactive=True)
-                                nsw = gr.Slider(label="noise_scale_w", minimum=0.1, maximum=1.0, step=0.1, value=0.668,
-                                                interactive=True)
-                                ls = gr.Slider(label="length_scale", minimum=0.1, maximum=2.0, step=0.1, value=1.0)
-                        with gr.Column():
-                            o1 = gr.Textbox(label="Output Message")
-                            o2 = gr.Audio(label="Output Audio", elem_id=f"tts-audio")
-                            download = gr.Button("Download Audio")
-                        btn.click(tts_fn, inputs=[input_text, ns, nsw, ls, sid], outputs=[o1, o2], api_name=f"tts")
-                        download.click(None, [], [], _js=download_audio_js)
-    if args.colab:
-        webbrowser.open("http://127.0.0.1:7860")
-    app.queue(concurrency_count=1, api_open=args.api).launch(share=args.share)
+    with gr.Interface(
+            fn=tts_fn,
+            inputs=[gr.inputs.Textbox(label="Text", lines=5, value="今日はいい天気ですね。"),
+                    gr.inputs.Slider(label="noise_scale", minimum=0.1, maximum=1.0, step=0.1, value=0.6),
+                    gr.inputs.Slider(label="noise_scale_w", minimum=0.1, maximum=1.0, step=0.1, value=0.668),
+                    gr.inputs.Slider(label="length_scale", minimum=0.1, maximum=2.0, step=0.1, value=1.0),
+                    gr.inputs.Dropdown(label="Emotion", choices=list(emotion_dict.keys())),
+                    gr.inputs.Number(label="speaker_id", value=10)],
+            outputs=[gr.outputs.Textbox(label="Output Message"), gr.outputs.Audio(label="Output Audio")],
+            allow_flagging=False,
+            layout="vertical",
+            title="TTS Synthesizer",
+            description="This is a TTS Synthesizer based on TransformerTTS."
+    ) as iface:
+        if args.colab:
+            iface.launch(inline=False)
+        elif args.api:
+            iface.launch(share=True)
+        else:
+            iface.launch()
+    with gr.Interface(
+            fn=tts_fn,
+            inputs=[gr.inputs.Textbox(label="Text", lines=5, value="今日はいい天気ですね。"),
+                    gr.inputs.Slider(label="noise_scale", minimum=0.1, maximum=1.0, step=0.1, value=0.6),
+                    gr.inputs.Slider(label="noise_scale_w", minimum=0.1, maximum=1.0, step=0.1, value=0.668),
+                    gr.inputs.Slider(label="length_scale", minimum=0.1, maximum=2.0, step=0.1, value=1.0),
+                    gr.inputs.Number(label="Emotion ID", min_value=0, max_value=len(emotion_dict)-1, step=1, value=0),
+                    gr.inputs.Number(label="speaker_id", value=10)],
+            outputs=[gr.outputs.Textbox(label="Output Message"), gr.outputs.Audio(label="Output Audio")],
+            allow_flagging=False,
+            layout="vertical",
+            title="TTS Synthesizer",
+            description="This is a TTS Synthesizer based on TransformerTTS."
+    ) as iface:
+        if args.api:
+            if args.share:
+                iface.share()
+            else:
+                iface.launch()
+            elif args.colab:
+                iface.launch(inline=False)
+            else:
+                iface.launch()
+   
