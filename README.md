@@ -54,6 +54,9 @@ Edit "training_files" and "validation_files" in configs/config.json
 
 ## Train
 ```sh
+# One speakers
+python train.py -c configs/config.json -m checkpoints
+
 # Mutiple speakers
 python train_ms.py -c configs/config.json -m checkpoints
 ```
