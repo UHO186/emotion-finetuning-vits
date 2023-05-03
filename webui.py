@@ -5,7 +5,11 @@ import commons
 import torch
 import gradio as gr
 import webbrowser
+import sys
+import utils
+import argparse
 from models import SynthesizerTrn
+from text.symbols import symbols
 from text import text_to_sequence
 from torch import no_grad, LongTensor
 import logging
@@ -14,6 +18,27 @@ logging.getLogger("PIL").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("asyncio").setLevel(logging.WARNING)
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--arg1', type=str, default='configs/vtubers.json', help='path to json file')
+parser.add_argument('--arg2', type=str, default='nene_final.pth', help='path to checkpoint')
+parser.add_argument('--arg3', type=str, default='all_emotions.npy', help='path to emotion file')
+args = parser.parse_args()
+
+json_file = args.arg1
+checkpoint = args.arg2
+emotion_file = args.arg3
+hps = utils.get_hparams_from_file(json_file)
+net_g = SynthesizerTrn(
+    len(symbols),
+    hps.data.filter_length // 2 + 1,
+    hps.train.segment_size // hps.data.hop_length,
+    n_speakers=hps.data.n_speakers,
+    **hps.model)
+_ = net_g.eval()
+
+_ = utils.load_checkpoint(checkpoint, net_g, None)
+all_emotions = np.load(emotion_file)
 
 def get_text(text, hps):
     text_norm= text_to_sequence(text, hps.data.text_cleaners)
