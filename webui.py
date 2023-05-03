@@ -111,7 +111,7 @@ if __name__ == '__main__':
                             o1 = gr.Textbox(label="Output Message")
                             o2 = gr.Audio(label="Output Audio", elem_id=f"tts-audio")
                             download = gr.Button("Download Audio")
-                       btn.click(tts_fn, inputs=[input_text, ns, nsw, ls, sid, emotion_num], outputs=[o1, o2], api_name=f"tts")
+                        btn.click(tts_fn, inputs=[input_text, ns, nsw, ls, sid, emotion_num], outputs=[o1, o2], api_name=f"tts")
                         download.click(None, [], [], _js=download_audio_js)
     if args.colab:
         webbrowser.open("http://127.0.0.1:7860")
