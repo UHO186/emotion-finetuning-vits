@@ -6,15 +6,15 @@ original repo2: https://github.com/SayaSS/vits-finetuning.git
 
 emotion-vits repo: https://github.com/innnky/emotional-vits.git
 
-## Online training and inference
+## 온라인 학습 및 추론
 ### colab
 See [vits-finetuning](https://colab.research.google.com/drive/13FF2pBWxj9rMR1SjI_JpVD6mTRN-kq--?usp=share_link)
 
-# How to use
+# 사용 방법은 다음과 같습니다.
 (Suggestion) Python == 3.7
 
 이 저장소에서는 일본어 데이터셋만 사용하여 파인튜닝이 가능합니다. 한국어 데이터셋은 사용할 수 없습니다.
-## Clone this repository
+## 레포지토리를 복제
 ```sh
 git clone https://github.com/umjuho/emotion-finetuning-vits.git
 ```
@@ -22,7 +22,7 @@ git clone https://github.com/umjuho/emotion-finetuning-vits.git
 ```sh
 pip install -r requirements.txt
 ```
-## Download pre-trained model
+## 사전 학습된(pre-trained) 모델을 다운로드
 - [G_0.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0.pth)
 - [D_0.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0.pth)
 - "utils.py" 파일의 152번 줄에 있는 "model_dir"을 수정하세요.
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 - [G_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0-p.pth)
 - [D_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0-p.pth)
 
-## Create datasets
+## 데이터셋 생성
 - 화자 ID는 0에서 803 사이여야 합니다.
 - 약 50개의 오디오-텍스트 쌍이면 충분하며, 100~600 에포크(epoch)는 꽤 좋은 성능을 보일 수 있지만, 더 많은 데이터가 더 좋을 수도 있습니다.
 - 모든 오디오 파일을 22050Hz, 16비트, 모노 wav 파일로 리샘플링(resample)하세요.
@@ -45,7 +45,7 @@ path/to/XXX.wav|speaker id|transcript
 ```
 dataset/001.wav|10|こんにちは。
 ```
-For complete examples, please see filelists/miyu_train.txt and filelists/miyu_val.txt.
+자세한 예시는 filelists/miyu_train.txt 및 filelists/miyu_val.txt 파일을 참조하세요.
 
 ## 전처리
 ```sh
@@ -54,7 +54,7 @@ python preprocess.py --filelists filelists/filelist_train.txt filelists/filelist
 ```sh
 python emotion_extract.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
 ```
-Edit "training_files" and "validation_files" in configs/config.json
+configs/config.json" 파일의 "training_files" 및 "validation_files"을 수정하세요.
 
 ## 학습
 ```sh
