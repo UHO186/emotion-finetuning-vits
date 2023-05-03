@@ -8,6 +8,7 @@ import webbrowser
 import sys
 import utils
 import argparse
+import numpy as np
 from models import SynthesizerTrn
 from text.symbols import symbols
 from text import text_to_sequence
