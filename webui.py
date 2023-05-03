@@ -48,15 +48,17 @@ def get_text(text, hps):
     return text_norm
 
 def create_tts_fn(net_g_ms):
-    def tts_fn(text, noise_scale, noise_scale_w, length_scale, speaker_id):
+    def tts_fn(text, noise_scale, noise_scale_w, length_scale, speaker_id, emotion_num):
         text = text.replace('\n', ' ').replace('\r', '').replace(" ", "")
-        stn_tst= get_text(text, hps_ms)
+        stn_tst = get_text(text, hps_ms)
         with no_grad():
             x_tst = stn_tst.unsqueeze(0).to(device)
             x_tst_lengths = LongTensor([stn_tst.size(0)]).to(device)
             sid = LongTensor([speaker_id]).to(device)
+            emb = all_emotions[emotion_num]
+            emb = torch.tensor(emb, device=device).unsqueeze(0)
             audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=noise_scale, noise_scale_w=noise_scale_w,
-                                   length_scale=length_scale)[0][0, 0].data.cpu().float().numpy()
+                                   length_scale=length_scale, z=emb)[0][0, 0].data.cpu().float().numpy()
         return "Success", (22050, audio)
     return tts_fn
 
@@ -115,6 +117,7 @@ if __name__ == '__main__':
                                                     elem_id=f"input-text")
                             btn = gr.Button(value="Generate", variant="primary")
                             sid = gr.Number(label="speaker_id", value=10)
+                            emotion_num = gr.Number(label="Emotion Number", minimum=0, maximum=len(all_emotions)-1, step=1, default_value=0)
                             with gr.Row():
                                 ns = gr.Slider(label="noise_scale", minimum=0.1, maximum=1.0, step=0.1, value=0.6,
                                                interactive=True)
@@ -125,7 +128,7 @@ if __name__ == '__main__':
                             o1 = gr.Textbox(label="Output Message")
                             o2 = gr.Audio(label="Output Audio", elem_id=f"tts-audio")
                             download = gr.Button("Download Audio")
-                        btn.click(tts_fn, inputs=[input_text, ns, nsw, ls, sid], outputs=[o1, o2], api_name=f"tts")
+                       btn.click(tts_fn, inputs=[input_text, ns, nsw, ls, sid, emotion_num], outputs=[o1, o2], api_name=f"tts")
                         download.click(None, [], [], _js=download_audio_js)
     if args.colab:
         webbrowser.open("http://127.0.0.1:7860")
