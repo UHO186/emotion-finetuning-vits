@@ -9,6 +9,7 @@ from models import SynthesizerTrn
 from text import text_to_sequence
 from torch import no_grad, LongTensor
 import logging
+import numpy as np
 logging.getLogger('numba').setLevel(logging.WARNING)
 logging.getLogger("PIL").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
