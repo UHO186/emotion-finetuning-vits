@@ -1,0 +1,3350 @@
+Determining if the environ exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f7d3e/fast && gmake  -f CMakeFiles/cmTC_f7d3e.dir/build.make CMakeFiles/cmTC_f7d3e.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f7d3e.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -std=gnu11 -o CMakeFiles/cmTC_f7d3e.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘environ’ undeclared (first use in this function)
+    8 |   return ((int*)(&environ))[argc];
+      |                   ^~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f7d3e.dir/build.make:78: CMakeFiles/cmTC_f7d3e.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f7d3e/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef environ
+  return ((int*)(&environ))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Checking whether CXX compiler has environ in stdlib.h failed to compile with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dd2bf/fast && gmake  -f CMakeFiles/cmTC_dd2bf.dir/build.make CMakeFiles/cmTC_dd2bf.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dd2bf.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++ -DTEST_KWSYS_CXX_HAS_ENVIRON_IN_STDLIB_H  -std=gnu++17 -o CMakeFiles/cmTC_dd2bf.dir/kwsysPlatformTestsCXX.cxx.o -c /home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/kwsysPlatformTestsCXX.cxx:53:13: error: ‘environ’ was not declared in this scope; did you mean ‘union’?
+   53 |   char* e = environ[0];
+      |             ^~~~~~~
+      |             union
+gmake[1]: *** [CMakeFiles/cmTC_dd2bf.dir/build.make:78: CMakeFiles/cmTC_dd2bf.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_dd2bf/fast] Error 2
+
+
+
+Checking whether CXX compiler struct stat has st_mtimespec member failed to compile with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8eac1/fast && gmake  -f CMakeFiles/cmTC_8eac1.dir/build.make CMakeFiles/cmTC_8eac1.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8eac1.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++ -DTEST_KWSYS_CXX_STAT_HAS_ST_MTIMESPEC  -std=gnu++17 -o CMakeFiles/cmTC_8eac1.dir/kwsysPlatformTestsCXX.cxx.o -c /home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/kwsysPlatformTestsCXX.cxx:26:15: error: ‘struct stat’ has no member named ‘st_mtimespec’
+   26 |   (void)stat1.st_mtimespec.tv_sec;
+      |               ^~~~~~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/kwsysPlatformTestsCXX.cxx:27:15: error: ‘struct stat’ has no member named ‘st_mtimespec’
+   27 |   (void)stat1.st_mtimespec.tv_nsec;
+      |               ^~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_8eac1.dir/build.make:78: CMakeFiles/cmTC_8eac1.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/Source/kwsys/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8eac1/fast] Error 2
+
+
+
+Determining if the function connect exists in the socket;dl failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dc0a0/fast && gmake  -f CMakeFiles/cmTC_dc0a0.dir/build.make CMakeFiles/cmTC_dc0a0.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc0a0.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=connect -std=gnu11 -o CMakeFiles/cmTC_dc0a0.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dc0a0
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_dc0a0.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_dc0a0.dir/CheckFunctionExists.c.o -o cmTC_dc0a0  -lsocket -ldl 
+/usr/bin/ld: cannot find -lsocket: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_dc0a0.dir/build.make:99: cmTC_dc0a0] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_dc0a0/fast] Error 2
+
+
+
+Determining if the function recv exists in the network;dl failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0ffa2/fast && gmake  -f CMakeFiles/cmTC_0ffa2.dir/build.make CMakeFiles/cmTC_0ffa2.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ffa2.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=recv -std=gnu11 -o CMakeFiles/cmTC_0ffa2.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0ffa2
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_0ffa2.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=recv CMakeFiles/cmTC_0ffa2.dir/CheckFunctionExists.c.o -o cmTC_0ffa2  -lnetwork -ldl 
+/usr/bin/ld: cannot find -lnetwork: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_0ffa2.dir/build.make:99: cmTC_0ffa2] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0ffa2/fast] Error 2
+
+
+
+Determining if the RAND_status exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_21ac0/fast && gmake  -f CMakeFiles/cmTC_21ac0.dir/build.make CMakeFiles/cmTC_21ac0.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21ac0.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_21ac0.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: error: ‘RAND_status’ undeclared (first use in this function)
+    7 |   return ((int*)(&RAND_status))[argc];
+      |                   ^~~~~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_21ac0.dir/build.make:78: CMakeFiles/cmTC_21ac0.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_21ac0/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_status
+  return ((int*)(&RAND_status))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the RAND_screen exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cac5b/fast && gmake  -f CMakeFiles/cmTC_cac5b.dir/build.make CMakeFiles/cmTC_cac5b.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cac5b.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_cac5b.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: error: ‘RAND_screen’ undeclared (first use in this function)
+    7 |   return ((int*)(&RAND_screen))[argc];
+      |                   ^~~~~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_cac5b.dir/build.make:78: CMakeFiles/cmTC_cac5b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_cac5b/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_screen
+  return ((int*)(&RAND_screen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the RAND_egd exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ff9a4/fast && gmake  -f CMakeFiles/cmTC_ff9a4.dir/build.make CMakeFiles/cmTC_ff9a4.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff9a4.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_ff9a4.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: error: ‘RAND_egd’ undeclared (first use in this function)
+    7 |   return ((int*)(&RAND_egd))[argc];
+      |                   ^~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_ff9a4.dir/build.make:78: CMakeFiles/cmTC_ff9a4.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ff9a4/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_egd
+  return ((int*)(&RAND_egd))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function dlopen exists in the dl;/usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so;cmnghttp2 failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7c262/fast && gmake  -f CMakeFiles/cmTC_7c262.dir/build.make CMakeFiles/cmTC_7c262.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7c262.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=dlopen -std=gnu11 -o CMakeFiles/cmTC_7c262.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7c262
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_7c262.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=dlopen CMakeFiles/cmTC_7c262.dir/CheckFunctionExists.c.o -o cmTC_7c262  -ldl /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so -lcmnghttp2 
+/usr/bin/ld: cannot find -lcmnghttp2: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_7c262.dir/build.make:101: cmTC_7c262] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7c262/fast] Error 2
+
+
+
+Determining if files stdio.h;inttypes.h;sys/filio.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ee21d/fast && gmake  -f CMakeFiles/cmTC_ee21d.dir/build.make CMakeFiles/cmTC_ee21d.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ee21d.dir/HAVE_SYS_FILIO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_ee21d.dir/HAVE_SYS_FILIO_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_FILIO_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_FILIO_H.c:4:10: fatal error: sys/filio.h: No such file or directory
+    4 | #include <sys/filio.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_ee21d.dir/build.make:78: CMakeFiles/cmTC_ee21d.dir/HAVE_SYS_FILIO_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ee21d/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/filio.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6e4bb/fast && gmake  -f CMakeFiles/cmTC_6e4bb.dir/build.make CMakeFiles/cmTC_6e4bb.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6e4bb.dir/HAVE_SYS_SOCKIO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_6e4bb.dir/HAVE_SYS_SOCKIO_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKIO_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKIO_H.c:10:10: fatal error: sys/sockio.h: No such file or directory
+   10 | #include <sys/sockio.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_6e4bb.dir/build.make:78: CMakeFiles/cmTC_6e4bb.dir/HAVE_SYS_SOCKIO_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_6e4bb/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/utime.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d0a3c/fast && gmake  -f CMakeFiles/cmTC_d0a3c.dir/build.make CMakeFiles/cmTC_d0a3c.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0a3c.dir/HAVE_SYS_UTIME_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_d0a3c.dir/HAVE_SYS_UTIME_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UTIME_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UTIME_H.c:15:10: fatal error: sys/utime.h: No such file or directory
+   15 | #include <sys/utime.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_d0a3c.dir/build.make:78: CMakeFiles/cmTC_d0a3c.dir/HAVE_SYS_UTIME_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d0a3c/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/utime.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;crypto.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5b694/fast && gmake  -f CMakeFiles/cmTC_5b694.dir/build.make CMakeFiles/cmTC_5b694.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5b694.dir/HAVE_CRYPTO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_5b694.dir/HAVE_CRYPTO_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_CRYPTO_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_CRYPTO_H.c:20:10: fatal error: crypto.h: No such file or directory
+   20 | #include <crypto.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_5b694.dir/build.make:78: CMakeFiles/cmTC_5b694.dir/HAVE_CRYPTO_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5b694/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <crypto.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn2.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ed80/fast && gmake  -f CMakeFiles/cmTC_9ed80.dir/build.make CMakeFiles/cmTC_9ed80.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ed80.dir/HAVE_IDN2_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_9ed80.dir/HAVE_IDN2_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_IDN2_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_IDN2_H.c:23:10: fatal error: idn2.h: No such file or directory
+   23 | #include <idn2.h>
+      |          ^~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_9ed80.dir/build.make:78: CMakeFiles/cmTC_9ed80.dir/HAVE_IDN2_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9ed80/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn2.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;io.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8e519/fast && gmake  -f CMakeFiles/cmTC_8e519.dir/build.make CMakeFiles/cmTC_8e519.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e519.dir/HAVE_IO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_8e519.dir/HAVE_IO_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_IO_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_IO_H.c:24:10: fatal error: io.h: No such file or directory
+   24 | #include <io.h>
+      |          ^~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_8e519.dir/build.make:78: CMakeFiles/cmTC_8e519.dir/HAVE_IO_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8e519/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <io.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;krb.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_14fcf/fast && gmake  -f CMakeFiles/cmTC_14fcf.dir/build.make CMakeFiles/cmTC_14fcf.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_14fcf.dir/HAVE_KRB_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_14fcf.dir/HAVE_KRB_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_KRB_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_KRB_H.c:24:10: fatal error: krb.h: No such file or directory
+   24 | #include <krb.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_14fcf.dir/build.make:78: CMakeFiles/cmTC_14fcf.dir/HAVE_KRB_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_14fcf/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <krb.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;pem.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d6c75/fast && gmake  -f CMakeFiles/cmTC_d6c75.dir/build.make CMakeFiles/cmTC_d6c75.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d6c75.dir/HAVE_PEM_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_d6c75.dir/HAVE_PEM_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_PEM_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_PEM_H.c:30:10: fatal error: pem.h: No such file or directory
+   30 | #include <pem.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_d6c75.dir/build.make:78: CMakeFiles/cmTC_d6c75.dir/HAVE_PEM_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d6c75/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <pem.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;rsa.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f3a12/fast && gmake  -f CMakeFiles/cmTC_f3a12.dir/build.make CMakeFiles/cmTC_f3a12.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f3a12.dir/HAVE_RSA_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_f3a12.dir/HAVE_RSA_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_RSA_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_RSA_H.c:32:10: fatal error: rsa.h: No such file or directory
+   32 | #include <rsa.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_f3a12.dir/build.make:78: CMakeFiles/cmTC_f3a12.dir/HAVE_RSA_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f3a12/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <rsa.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;ssl.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_36132/fast && gmake  -f CMakeFiles/cmTC_36132.dir/build.make CMakeFiles/cmTC_36132.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36132.dir/HAVE_SSL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_36132.dir/HAVE_SSL_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SSL_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SSL_H.c:35:10: fatal error: ssl.h: No such file or directory
+   35 | #include <ssl.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_36132.dir/build.make:78: CMakeFiles/cmTC_36132.dir/HAVE_SSL_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_36132/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;stropts.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_101de/fast && gmake  -f CMakeFiles/cmTC_101de.dir/build.make CMakeFiles/cmTC_101de.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_101de.dir/HAVE_STROPTS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_101de.dir/HAVE_STROPTS_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c:41:10: fatal error: stropts.h: No such file or directory
+   41 | #include <stropts.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_101de.dir/build.make:78: CMakeFiles/cmTC_101de.dir/HAVE_STROPTS_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_101de/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;termio.h;termios.h;time.h;unistd.h;utime.h;x509.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7e63d/fast && gmake  -f CMakeFiles/cmTC_7e63d.dir/build.make CMakeFiles/cmTC_7e63d.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7e63d.dir/HAVE_X509_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_7e63d.dir/HAVE_X509_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_X509_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_X509_H.c:46:10: fatal error: x509.h: No such file or directory
+   46 | #include <x509.h>
+      |          ^~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_7e63d.dir/build.make:78: CMakeFiles/cmTC_7e63d.dir/HAVE_X509_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7e63d/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <x509.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;termio.h;termios.h;time.h;unistd.h;utime.h;process.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a2d8d/fast && gmake  -f CMakeFiles/cmTC_a2d8d.dir/build.make CMakeFiles/cmTC_a2d8d.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2d8d.dir/HAVE_PROCESS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_a2d8d.dir/HAVE_PROCESS_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_PROCESS_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_PROCESS_H.c:46:10: fatal error: process.h: No such file or directory
+   46 | #include <process.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_a2d8d.dir/build.make:78: CMakeFiles/cmTC_a2d8d.dir/HAVE_PROCESS_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a2d8d/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <process.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;termio.h;termios.h;time.h;unistd.h;utime.h;stddef.h;dlfcn.h;malloc.h;memory.h;netinet/if_ether.h;stdint.h;sockio.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2aa34/fast && gmake  -f CMakeFiles/cmTC_2aa34.dir/build.make CMakeFiles/cmTC_2aa34.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2aa34.dir/HAVE_SOCKIO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_2aa34.dir/HAVE_SOCKIO_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SOCKIO_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SOCKIO_H.c:52:10: fatal error: sockio.h: No such file or directory
+   52 | #include <sockio.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_2aa34.dir/build.make:78: CMakeFiles/cmTC_2aa34.dir/HAVE_SOCKIO_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_2aa34/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sockio.h>
+
+
+int main(void){return 0;}
+
+Determining if the stricmp exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3fe1f/fast && gmake  -f CMakeFiles/cmTC_3fe1f.dir/build.make CMakeFiles/cmTC_3fe1f.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3fe1f.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_3fe1f.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘stricmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   58 |   return ((int*)(&stricmp))[argc];
+      |                   ^~~~~~~
+      |                   strncmp
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_3fe1f.dir/build.make:78: CMakeFiles/cmTC_3fe1f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3fe1f/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cb3a5/fast && gmake  -f CMakeFiles/cmTC_cb3a5.dir/build.make CMakeFiles/cmTC_cb3a5.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb3a5.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_cb3a5.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘strcmpi’ undeclared (first use in this function); did you mean ‘strcmp’?
+   58 |   return ((int*)(&strcmpi))[argc];
+      |                   ^~~~~~~
+      |                   strcmp
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_cb3a5.dir/build.make:78: CMakeFiles/cmTC_cb3a5.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_cb3a5/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strncmpi exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c2694/fast && gmake  -f CMakeFiles/cmTC_c2694.dir/build.make CMakeFiles/cmTC_c2694.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2694.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_c2694.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘strncmpi’ undeclared (first use in this function); did you mean ‘strncmp’?
+   58 |   return ((int*)(&strncmpi))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_c2694.dir/build.make:78: CMakeFiles/cmTC_c2694.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c2694/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncmpi
+  return ((int*)(&strncmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_ntoa_r exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_270c3/fast && gmake  -f CMakeFiles/cmTC_270c3.dir/build.make CMakeFiles/cmTC_270c3.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_270c3.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_270c3.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘inet_ntoa_r’ undeclared (first use in this function); did you mean ‘inet_ntoa’?
+   58 |   return ((int*)(&inet_ntoa_r))[argc];
+      |                   ^~~~~~~~~~~
+      |                   inet_ntoa
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_270c3.dir/build.make:78: CMakeFiles/cmTC_270c3.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_270c3/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_ntoa_r
+  return ((int*)(&inet_ntoa_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the closesocket exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f594f/fast && gmake  -f CMakeFiles/cmTC_f594f.dir/build.make CMakeFiles/cmTC_f594f.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f594f.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_f594f.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘closesocket’ undeclared (first use in this function)
+   58 |   return ((int*)(&closesocket))[argc];
+      |                   ^~~~~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f594f.dir/build.make:78: CMakeFiles/cmTC_f594f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f594f/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getpass_r exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bb558/fast && gmake  -f CMakeFiles/cmTC_bb558.dir/build.make CMakeFiles/cmTC_bb558.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb558.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_bb558.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘getpass_r’ undeclared (first use in this function); did you mean ‘getpass’?
+   58 |   return ((int*)(&getpass_r))[argc];
+      |                   ^~~~~~~~~
+      |                   getpass
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_bb558.dir/build.make:78: CMakeFiles/cmTC_bb558.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bb558/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpass_r
+  return ((int*)(&getpass_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strtoi64 exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e5a58/fast && gmake  -f CMakeFiles/cmTC_e5a58.dir/build.make CMakeFiles/cmTC_e5a58.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e5a58.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_e5a58.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘_strtoi64’ undeclared (first use in this function)
+   58 |   return ((int*)(&_strtoi64))[argc];
+      |                   ^~~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_e5a58.dir/build.make:78: CMakeFiles/cmTC_e5a58.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e5a58/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strtoi64
+  return ((int*)(&_strtoi64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setmode exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ca664/fast && gmake  -f CMakeFiles/cmTC_ca664.dir/build.make CMakeFiles/cmTC_ca664.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca664.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_ca664.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘setmode’ undeclared (first use in this function)
+   58 |   return ((int*)(&setmode))[argc];
+      |                   ^~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_ca664.dir/build.make:78: CMakeFiles/cmTC_ca664.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ca664/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setmode
+  return ((int*)(&setmode))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function mach_absolute_time exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5f768/fast && gmake  -f CMakeFiles/cmTC_5f768.dir/build.make CMakeFiles/cmTC_5f768.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f768.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=mach_absolute_time -std=gnu11 -o CMakeFiles/cmTC_5f768.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5f768
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_5f768.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=mach_absolute_time CMakeFiles/cmTC_5f768.dir/CheckFunctionExists.c.o -o cmTC_5f768 
+/usr/bin/ld: CMakeFiles/cmTC_5f768.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `mach_absolute_time'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_5f768.dir/build.make:99: cmTC_5f768] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5f768/fast] Error 2
+
+
+
+Performing Curl Test HAVE_FSETXATTR_6 failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cc03a/fast && gmake  -f CMakeFiles/cmTC_cc03a.dir/build.make CMakeFiles/cmTC_cc03a.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cc03a.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_FSETXATTR_6  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_cc03a.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:526:3: error: too many arguments to function ‘fsetxattr’
+  526 |   fsetxattr(0, 0, 0, 0, 0, 0);
+      |   ^~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:523:
+/usr/include/x86_64-linux-gnu/sys/xattr.h:54:12: note: declared here
+   54 | extern int fsetxattr (int __fd, const char *__name, const void *__value,
+      |            ^~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_cc03a.dir/build.make:78: CMakeFiles/cmTC_cc03a.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_cc03a/fast] Error 2
+
+
+Determining size of ADDRESS_FAMILY failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5c939/fast && gmake  -f CMakeFiles/cmTC_5c939.dir/build.make CMakeFiles/cmTC_5c939.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5c939.dir/SIZEOF_ADDRESS_FAMILY.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_5c939.dir/SIZEOF_ADDRESS_FAMILY.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckTypeSize/SIZEOF_ADDRESS_FAMILY.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckTypeSize/SIZEOF_ADDRESS_FAMILY.c:4:10: fatal error: ws2def.h: No such file or directory
+    4 | #include "ws2def.h"
+      |          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_5c939.dir/build.make:78: CMakeFiles/cmTC_5c939.dir/SIZEOF_ADDRESS_FAMILY.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5c939/fast] Error 2
+
+
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckTypeSize/SIZEOF_ADDRESS_FAMILY.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "ws2def.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ADDRESS_FAMILY))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing Curl Test HAVE_IOCTLSOCKET failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3f662/fast && gmake  -f CMakeFiles/cmTC_3f662.dir/build.make CMakeFiles/cmTC_3f662.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f662.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_3f662.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:308:44: error: ‘FIONBIO’ undeclared (first use in this function)
+  308 |  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+      |                                            ^~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:308:44: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_3f662.dir/build.make:78: CMakeFiles/cmTC_3f662.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3f662/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fd19e/fast && gmake  -f CMakeFiles/cmTC_fd19e.dir/build.make CMakeFiles/cmTC_fd19e.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fd19e.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_fd19e.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_fd19e
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_fd19e.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_fd19e.dir/CurlTests.c.o -o cmTC_fd19e 
+/usr/bin/ld: CMakeFiles/cmTC_fd19e.dir/CurlTests.c.o: in function `main':
+CurlTests.c:(.text+0x1d): undefined reference to `IoctlSocket'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_fd19e.dir/build.make:99: cmTC_fd19e] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_fd19e/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4640b/fast && gmake  -f CMakeFiles/cmTC_4640b.dir/build.make CMakeFiles/cmTC_4640b.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4640b.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET_CAMEL_FIONBIO  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_4640b.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:364:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  364 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:364:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_4640b.dir/build.make:78: CMakeFiles/cmTC_4640b.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_4640b/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5b927/fast && gmake  -f CMakeFiles/cmTC_5b927.dir/build.make CMakeFiles/cmTC_5b927.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5b927.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET_FIONBIO  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_5b927.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:391:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  391 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:391:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_5b927.dir/build.make:78: CMakeFiles/cmTC_5b927.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5b927/fast] Error 2
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c2898/fast && gmake  -f CMakeFiles/cmTC_c2898.dir/build.make CMakeFiles/cmTC_c2898.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2898.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_c2898.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:487:43: error: ‘SO_NONBLOCK’ undeclared (first use in this function); did you mean ‘SOCK_NONBLOCK’?
+  487 |         if(0 != setsockopt(0, SOL_SOCKET, SO_NONBLOCK, 0, 0))
+      |                                           ^~~~~~~~~~~
+      |                                           SOCK_NONBLOCK
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:487:43: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_c2898.dir/build.make:78: CMakeFiles/cmTC_c2898.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c2898/fast] Error 2
+
+
+Performing Curl Test HAVE_O_NONBLOCK failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_16d14/fast && gmake  -f CMakeFiles/cmTC_16d14.dir/build.make CMakeFiles/cmTC_16d14.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16d14.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_O_NONBLOCK  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_16d14.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_16d14
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_16d14.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DHAVE_O_NONBLOCK  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_16d14.dir/CurlTests.c.o -o cmTC_16d14 
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_16d14.dir/build.make:99: cmTC_16d14] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_16d14/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_5 failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9e4aa/fast && gmake  -f CMakeFiles/cmTC_9e4aa.dir/build.make CMakeFiles/cmTC_9e4aa.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9e4aa.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_5  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_9e4aa.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:127:8: error: too few arguments to function ‘gethostbyaddr_r’
+  127 |   rc = gethostbyaddr_r(address, length, type, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_9e4aa.dir/build.make:78: CMakeFiles/cmTC_9e4aa.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9e4aa/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_7 failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_535ad/fast && gmake  -f CMakeFiles/cmTC_535ad.dir/build.make CMakeFiles/cmTC_535ad.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_535ad.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_7  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_535ad.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:131:8: error: too few arguments to function ‘gethostbyaddr_r’
+  131 |   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_535ad.dir/build.make:78: CMakeFiles/cmTC_535ad.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_535ad/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_5_REENTRANT failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6a659/fast && gmake  -f CMakeFiles/cmTC_6a659.dir/build.make CMakeFiles/cmTC_6a659.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6a659.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_5_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_6a659.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:127:8: error: too few arguments to function ‘gethostbyaddr_r’
+  127 |   rc = gethostbyaddr_r(address, length, type, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_6a659.dir/build.make:78: CMakeFiles/cmTC_6a659.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_6a659/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_7_REENTRANT failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_30057/fast && gmake  -f CMakeFiles/cmTC_30057.dir/build.make CMakeFiles/cmTC_30057.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30057.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_7_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_30057.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:131:8: error: too few arguments to function ‘gethostbyaddr_r’
+  131 |   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_30057.dir/build.make:78: CMakeFiles/cmTC_30057.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_30057/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3 failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4eac2/fast && gmake  -f CMakeFiles/cmTC_4eac2.dir/build.make CMakeFiles/cmTC_4eac2.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4eac2.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_3  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_4eac2.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:141:8: error: too few arguments to function ‘gethostbyname_r’
+  141 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_4eac2.dir/build.make:78: CMakeFiles/cmTC_4eac2.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_4eac2/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5 failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d9b22/fast && gmake  -f CMakeFiles/cmTC_d9b22.dir/build.make CMakeFiles/cmTC_d9b22.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d9b22.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_5  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_d9b22.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:144:8: error: too few arguments to function ‘gethostbyname_r’
+  144 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_d9b22.dir/build.make:78: CMakeFiles/cmTC_d9b22.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d9b22/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1c135/fast && gmake  -f CMakeFiles/cmTC_1c135.dir/build.make CMakeFiles/cmTC_1c135.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c135.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_3_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_1c135.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:141:8: error: too few arguments to function ‘gethostbyname_r’
+  141 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_1c135.dir/build.make:78: CMakeFiles/cmTC_1c135.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1c135/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_69fe8/fast && gmake  -f CMakeFiles/cmTC_69fe8.dir/build.make CMakeFiles/cmTC_69fe8.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69fe8.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_5_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_69fe8.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:144:8: error: too few arguments to function ‘gethostbyname_r’
+  144 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_69fe8.dir/build.make:78: CMakeFiles/cmTC_69fe8.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_69fe8/fast] Error 2
+
+
+Performing Curl Test HAVE_INET_NTOA_R_DECL failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0e700/fast && gmake  -f CMakeFiles/cmTC_0e700.dir/build.make CMakeFiles/cmTC_0e700.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e700.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_INET_NTOA_R_DECL  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_0e700.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:226:21: error: ‘inet_ntoa_r’ undeclared (first use in this function); did you mean ‘inet_ntoa’?
+  226 |   func = (func_type)inet_ntoa_r;
+      |                     ^~~~~~~~~~~
+      |                     inet_ntoa
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:226:21: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_0e700.dir/build.make:78: CMakeFiles/cmTC_0e700.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0e700/fast] Error 2
+
+
+Performing Curl Test HAVE_INET_NTOA_R_DECL_REENTRANT failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_327bc/fast && gmake  -f CMakeFiles/cmTC_327bc.dir/build.make CMakeFiles/cmTC_327bc.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_327bc.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_INET_NTOA_R_DECL_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_327bc.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:242:22: error: ‘inet_ntoa_r’ undeclared (first use in this function); did you mean ‘inet_ntoa’?
+  242 |   func = (func_type)&inet_ntoa_r;
+      |                      ^~~~~~~~~~~
+      |                      inet_ntoa
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:242:22: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_327bc.dir/build.make:78: CMakeFiles/cmTC_327bc.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_327bc/fast] Error 2
+
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d833b/fast && gmake  -f CMakeFiles/cmTC_d833b.dir/build.make CMakeFiles/cmTC_d833b.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d833b.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GLIBC_STRERROR_R  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_d833b.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:503:51: error: subscripted value is neither array nor pointer nor vector
+  503 |   check(strerror_r(EACCES, buffer, sizeof(buffer))[0]);
+      |                                                   ^
+gmake[1]: *** [CMakeFiles/cmTC_d833b.dir/build.make:78: CMakeFiles/cmTC_d833b.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d833b/fast] Error 2
+
+
+Performing Curl Test HAVE_BUILTIN_AVAILABLE failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_17d9b/fast && gmake  -f CMakeFiles/cmTC_17d9b.dir/build.make CMakeFiles/cmTC_17d9b.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17d9b.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_BUILTIN_AVAILABLE  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_17d9b.dir/CurlTests.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:550:26: error: ‘macOS’ undeclared (first use in this function)
+  550 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                          ^~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:550:26: note: each undeclared identifier is reported only once for each function it appears in
+/home/uho/vits-finetuning/cmake-3.21.0/Utilities/cmcurl/CMake/CurlTests.c:550:31: error: expected ‘)’ before numeric constant
+  550 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                         ~     ^~~~~~
+      |                               )
+gmake[1]: *** [CMakeFiles/cmTC_17d9b.dir/build.make:78: CMakeFiles/cmTC_17d9b.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_17d9b/fast] Error 2
+
+
+Determining if the arc4random_buf exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_01657/fast && gmake  -f CMakeFiles/cmTC_01657.dir/build.make CMakeFiles/cmTC_01657.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_01657.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_01657.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘arc4random_buf’ undeclared (first use in this function)
+    8 |   return ((int*)(&arc4random_buf))[argc];
+      |                   ^~~~~~~~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_01657.dir/build.make:78: CMakeFiles/cmTC_01657.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_01657/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef arc4random_buf
+  return ((int*)(&arc4random_buf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the arc4random exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bac95/fast && gmake  -f CMakeFiles/cmTC_bac95.dir/build.make CMakeFiles/cmTC_bac95.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bac95.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_bac95.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘arc4random’ undeclared (first use in this function); did you mean ‘srandom’?
+    8 |   return ((int*)(&arc4random))[argc];
+      |                   ^~~~~~~~~~
+      |                   srandom
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_bac95.dir/build.make:78: CMakeFiles/cmTC_bac95.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bac95/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef arc4random
+  return ((int*)(&arc4random))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file sys/sysctl.h exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_28043/fast && gmake  -f CMakeFiles/cmTC_28043.dir/build.make CMakeFiles/cmTC_28043.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28043.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -std=gnu11 -o CMakeFiles/cmTC_28043.dir/CheckIncludeFile.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/sysctl.h: No such file or directory
+    1 | #include <sys/sysctl.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_28043.dir/build.make:78: CMakeFiles/cmTC_28043.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_28043/fast] Error 2
+
+
+
+Determining if files sys/types.h;ctype.h;copyfile.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_84d16/fast && gmake  -f CMakeFiles/cmTC_84d16.dir/build.make CMakeFiles/cmTC_84d16.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84d16.dir/HAVE_COPYFILE_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_84d16.dir/HAVE_COPYFILE_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_COPYFILE_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_COPYFILE_H.c:4:10: fatal error: copyfile.h: No such file or directory
+    4 | #include <copyfile.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_84d16.dir/build.make:78: CMakeFiles/cmTC_84d16.dir/HAVE_COPYFILE_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_84d16/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;direct.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_447a5/fast && gmake  -f CMakeFiles/cmTC_447a5.dir/build.make CMakeFiles/cmTC_447a5.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_447a5.dir/HAVE_DIRECT_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_447a5.dir/HAVE_DIRECT_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_DIRECT_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_DIRECT_H.c:4:10: fatal error: direct.h: No such file or directory
+    4 | #include <direct.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_447a5.dir/build.make:78: CMakeFiles/cmTC_447a5.dir/HAVE_DIRECT_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_447a5/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <direct.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;ext2fs/ext2_fs.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fdaa5/fast && gmake  -f CMakeFiles/cmTC_fdaa5.dir/build.make CMakeFiles/cmTC_fdaa5.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fdaa5.dir/HAVE_EXT2FS_EXT2_FS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_fdaa5.dir/HAVE_EXT2FS_EXT2_FS_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_EXT2FS_EXT2_FS_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_EXT2FS_EXT2_FS_H.c:6:10: fatal error: ext2fs/ext2_fs.h: No such file or directory
+    6 | #include <ext2fs/ext2_fs.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_fdaa5.dir/build.make:78: CMakeFiles/cmTC_fdaa5.dir/HAVE_EXT2FS_EXT2_FS_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_fdaa5/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <ext2fs/ext2_fs.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_WORKING_EXT2_IOC_GETFLAGS failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2bd55/fast && gmake  -f CMakeFiles/cmTC_2bd55.dir/build.make CMakeFiles/cmTC_2bd55.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2bd55.dir/src.c.o
+/usr/bin/gcc -DHAVE_WORKING_EXT2_IOC_GETFLAGS  -w  -std=gnu11 -o CMakeFiles/cmTC_2bd55.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: ext2fs/ext2_fs.h: No such file or directory
+    2 | #include <ext2fs/ext2_fs.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_2bd55.dir/build.make:78: CMakeFiles/cmTC_2bd55.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_2bd55/fast] Error 2
+
+
+Source file was:
+#include <sys/ioctl.h>
+#include <ext2fs/ext2_fs.h>
+int main(void) { return EXT2_IOC_GETFLAGS; }
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;membership.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_107c9/fast && gmake  -f CMakeFiles/cmTC_107c9.dir/build.make CMakeFiles/cmTC_107c9.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_107c9.dir/HAVE_MEMBERSHIP_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_107c9.dir/HAVE_MEMBERSHIP_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_MEMBERSHIP_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_MEMBERSHIP_H.c:15:10: fatal error: membership.h: No such file or directory
+   15 | #include <membership.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_107c9.dir/build.make:78: CMakeFiles/cmTC_107c9.dir/HAVE_MEMBERSHIP_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_107c9/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <membership.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e5f2e/fast && gmake  -f CMakeFiles/cmTC_e5f2e.dir/build.make CMakeFiles/cmTC_e5f2e.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e5f2e.dir/HAVE_READPASSPHRASE_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_e5f2e.dir/HAVE_READPASSPHRASE_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_READPASSPHRASE_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_READPASSPHRASE_H.c:20:10: fatal error: readpassphrase.h: No such file or directory
+   20 | #include <readpassphrase.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_e5f2e.dir/build.make:78: CMakeFiles/cmTC_e5f2e.dir/HAVE_READPASSPHRASE_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e5f2e/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1881f/fast && gmake  -f CMakeFiles/cmTC_1881f.dir/build.make CMakeFiles/cmTC_1881f.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1881f.dir/HAVE_SYS_ACL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_1881f.dir/HAVE_SYS_ACL_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ACL_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ACL_H.c:27:10: fatal error: sys/acl.h: No such file or directory
+   27 | #include <sys/acl.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_1881f.dir/build.make:78: CMakeFiles/cmTC_1881f.dir/HAVE_SYS_ACL_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1881f/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/extattr.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_24cd6/fast && gmake  -f CMakeFiles/cmTC_24cd6.dir/build.make CMakeFiles/cmTC_24cd6.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24cd6.dir/HAVE_SYS_EXTATTR_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_24cd6.dir/HAVE_SYS_EXTATTR_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_EXTATTR_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_EXTATTR_H.c:28:10: fatal error: sys/extattr.h: No such file or directory
+   28 | #include <sys/extattr.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_24cd6.dir/build.make:78: CMakeFiles/cmTC_24cd6.dir/HAVE_SYS_EXTATTR_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_24cd6/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/extattr.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/mkdev.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8bc53/fast && gmake  -f CMakeFiles/cmTC_8bc53.dir/build.make CMakeFiles/cmTC_8bc53.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bc53.dir/HAVE_SYS_MKDEV_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_8bc53.dir/HAVE_SYS_MKDEV_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MKDEV_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MKDEV_H.c:29:10: fatal error: sys/mkdev.h: No such file or directory
+   29 | #include <sys/mkdev.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_8bc53.dir/build.make:78: CMakeFiles/cmTC_8bc53.dir/HAVE_SYS_MKDEV_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8bc53/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mkdev.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b58bb/fast && gmake  -f CMakeFiles/cmTC_b58bb.dir/build.make CMakeFiles/cmTC_b58bb.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b58bb.dir/HAVE_SYS_MOUNT_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_b58bb.dir/HAVE_SYS_MOUNT_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MOUNT_H.c
+In file included from /usr/include/linux/fs.h:19,
+                 from /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MOUNT_H.c:12:
+/usr/include/x86_64-linux-gnu/sys/mount.h:35:3: error: expected identifier before numeric constant
+   35 |   MS_RDONLY = 1,                /* Mount read-only.  */
+      |   ^~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_b58bb.dir/build.make:78: CMakeFiles/cmTC_b58bb.dir/HAVE_SYS_MOUNT_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b58bb/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/richacl.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ff688/fast && gmake  -f CMakeFiles/cmTC_ff688.dir/build.make CMakeFiles/cmTC_ff688.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff688.dir/HAVE_SYS_RICHACL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_ff688.dir/HAVE_SYS_RICHACL_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_RICHACL_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_SYS_RICHACL_H.c:31:10: fatal error: sys/richacl.h: No such file or directory
+   31 | #include <sys/richacl.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_ff688.dir/build.make:78: CMakeFiles/cmTC_ff688.dir/HAVE_SYS_RICHACL_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ff688/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/richacl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h;sys/statvfs.h;sys/sysmacros.h;sys/time.h;sys/utsname.h;sys/vfs.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_82f9d/fast && gmake  -f CMakeFiles/cmTC_82f9d.dir/build.make CMakeFiles/cmTC_82f9d.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_82f9d.dir/HAVE_WINDOWS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_82f9d.dir/HAVE_WINDOWS_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c:46:10: fatal error: windows.h: No such file or directory
+   46 | #include <windows.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_82f9d.dir/build.make:78: CMakeFiles/cmTC_82f9d.dir/HAVE_WINDOWS_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_82f9d/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+#include <sys/statvfs.h>
+#include <sys/sysmacros.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h;sys/statvfs.h;sys/sysmacros.h;sys/time.h;sys/utsname.h;sys/vfs.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;wincrypt.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8d5ae/fast && gmake  -f CMakeFiles/cmTC_8d5ae.dir/build.make CMakeFiles/cmTC_8d5ae.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8d5ae.dir/HAVE_WINCRYPT_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_8d5ae.dir/HAVE_WINCRYPT_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_WINCRYPT_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_WINCRYPT_H.c:46:10: fatal error: wincrypt.h: No such file or directory
+   46 | #include <wincrypt.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_8d5ae.dir/build.make:78: CMakeFiles/cmTC_8d5ae.dir/HAVE_WINCRYPT_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8d5ae/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+#include <sys/statvfs.h>
+#include <sys/sysmacros.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <wincrypt.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h;sys/statvfs.h;sys/sysmacros.h;sys/time.h;sys/utsname.h;sys/vfs.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;winioctl.h exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0be80/fast && gmake  -f CMakeFiles/cmTC_0be80.dir/build.make CMakeFiles/cmTC_0be80.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0be80.dir/HAVE_WINIOCTL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_0be80.dir/HAVE_WINIOCTL_H.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_WINIOCTL_H.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CheckIncludeFiles/HAVE_WINIOCTL_H.c:46:10: fatal error: winioctl.h: No such file or directory
+   46 | #include <winioctl.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_0be80.dir/build.make:78: CMakeFiles/cmTC_0be80.dir/HAVE_WINIOCTL_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0be80/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+#include <sys/statvfs.h>
+#include <sys/sysmacros.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <winioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if the function getvfsbyname exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e0da2/fast && gmake  -f CMakeFiles/cmTC_e0da2.dir/build.make CMakeFiles/cmTC_e0da2.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0da2.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=getvfsbyname  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_e0da2.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e0da2
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_e0da2.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=getvfsbyname  -fno-builtin CMakeFiles/cmTC_e0da2.dir/CheckFunctionExists.c.o -o cmTC_e0da2 
+/usr/bin/ld: CMakeFiles/cmTC_e0da2.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `getvfsbyname'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_e0da2.dir/build.make:99: cmTC_e0da2] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e0da2/fast] Error 2
+
+
+
+Determining if the function lchflags exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8b914/fast && gmake  -f CMakeFiles/cmTC_8b914.dir/build.make CMakeFiles/cmTC_8b914.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b914.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=lchflags  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_8b914.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8b914
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_8b914.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=lchflags  -fno-builtin CMakeFiles/cmTC_8b914.dir/CheckFunctionExists.c.o -o cmTC_8b914 
+/usr/bin/ld: CMakeFiles/cmTC_8b914.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `lchflags'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_8b914.dir/build.make:99: cmTC_8b914] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8b914/fast] Error 2
+
+
+
+Determining if the function readpassphrase exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c4153/fast && gmake  -f CMakeFiles/cmTC_c4153.dir/build.make CMakeFiles/cmTC_c4153.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4153.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=readpassphrase  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_c4153.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c4153
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_c4153.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=readpassphrase  -fno-builtin CMakeFiles/cmTC_c4153.dir/CheckFunctionExists.c.o -o cmTC_c4153 
+/usr/bin/ld: CMakeFiles/cmTC_c4153.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `readpassphrase'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_c4153.dir/build.make:99: cmTC_c4153] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c4153/fast] Error 2
+
+
+
+Determining if the function strncpy_s exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1c8a5/fast && gmake  -f CMakeFiles/cmTC_1c8a5.dir/build.make CMakeFiles/cmTC_1c8a5.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c8a5.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=strncpy_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_1c8a5.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1c8a5
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_1c8a5.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=strncpy_s  -fno-builtin CMakeFiles/cmTC_1c8a5.dir/CheckFunctionExists.c.o -o cmTC_1c8a5 
+/usr/bin/ld: CMakeFiles/cmTC_1c8a5.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `strncpy_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_1c8a5.dir/build.make:99: cmTC_1c8a5] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1c8a5/fast] Error 2
+
+
+
+Determining if the function _ctime64_s exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_83b48/fast && gmake  -f CMakeFiles/cmTC_83b48.dir/build.make CMakeFiles/cmTC_83b48.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83b48.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_ctime64_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_83b48.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_83b48
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_83b48.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_ctime64_s  -fno-builtin CMakeFiles/cmTC_83b48.dir/CheckFunctionExists.c.o -o cmTC_83b48 
+/usr/bin/ld: CMakeFiles/cmTC_83b48.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_ctime64_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_83b48.dir/build.make:99: cmTC_83b48] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_83b48/fast] Error 2
+
+
+
+Determining if the function _fseeki64 exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1108b/fast && gmake  -f CMakeFiles/cmTC_1108b.dir/build.make CMakeFiles/cmTC_1108b.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1108b.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_fseeki64  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_1108b.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1108b
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_1108b.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_fseeki64  -fno-builtin CMakeFiles/cmTC_1108b.dir/CheckFunctionExists.c.o -o cmTC_1108b 
+/usr/bin/ld: CMakeFiles/cmTC_1108b.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_fseeki64'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_1108b.dir/build.make:99: cmTC_1108b] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1108b/fast] Error 2
+
+
+
+Determining if the function _get_timezone exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_699d6/fast && gmake  -f CMakeFiles/cmTC_699d6.dir/build.make CMakeFiles/cmTC_699d6.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_699d6.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_get_timezone  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_699d6.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_699d6
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_699d6.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_get_timezone  -fno-builtin CMakeFiles/cmTC_699d6.dir/CheckFunctionExists.c.o -o cmTC_699d6 
+/usr/bin/ld: CMakeFiles/cmTC_699d6.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_get_timezone'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_699d6.dir/build.make:99: cmTC_699d6] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_699d6/fast] Error 2
+
+
+
+Determining if the function _gmtime64_s exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5ed85/fast && gmake  -f CMakeFiles/cmTC_5ed85.dir/build.make CMakeFiles/cmTC_5ed85.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ed85.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_gmtime64_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_5ed85.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5ed85
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_5ed85.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_gmtime64_s  -fno-builtin CMakeFiles/cmTC_5ed85.dir/CheckFunctionExists.c.o -o cmTC_5ed85 
+/usr/bin/ld: CMakeFiles/cmTC_5ed85.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_gmtime64_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_5ed85.dir/build.make:99: cmTC_5ed85] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5ed85/fast] Error 2
+
+
+
+Determining if the function _localtime64_s exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_efede/fast && gmake  -f CMakeFiles/cmTC_efede.dir/build.make CMakeFiles/cmTC_efede.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_efede.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_localtime64_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_efede.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_efede
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_efede.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_localtime64_s  -fno-builtin CMakeFiles/cmTC_efede.dir/CheckFunctionExists.c.o -o cmTC_efede 
+/usr/bin/ld: CMakeFiles/cmTC_efede.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_localtime64_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_efede.dir/build.make:99: cmTC_efede] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_efede/fast] Error 2
+
+
+
+Determining if the function _mkgmtime64 exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3ecae/fast && gmake  -f CMakeFiles/cmTC_3ecae.dir/build.make CMakeFiles/cmTC_3ecae.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ecae.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_3ecae.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3ecae
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_3ecae.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64  -fno-builtin CMakeFiles/cmTC_3ecae.dir/CheckFunctionExists.c.o -o cmTC_3ecae 
+/usr/bin/ld: CMakeFiles/cmTC_3ecae.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_mkgmtime64'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_3ecae.dir/build.make:99: cmTC_3ecae] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_3ecae/fast] Error 2
+
+
+
+Determining if the function cygwin_conv_path exists failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9e1b7/fast && gmake  -f CMakeFiles/cmTC_9e1b7.dir/build.make CMakeFiles/cmTC_9e1b7.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9e1b7.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_9e1b7.dir/CheckFunctionExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9e1b7
+/home/uho/vits-finetuning/cmake-3.21.0/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_9e1b7.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path  -fno-builtin CMakeFiles/cmTC_9e1b7.dir/CheckFunctionExists.c.o -o cmTC_9e1b7 
+/usr/bin/ld: CMakeFiles/cmTC_9e1b7.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cygwin_conv_path'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_9e1b7.dir/build.make:99: cmTC_9e1b7] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9e1b7/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_VFSCONF failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9e386/fast && gmake  -f CMakeFiles/cmTC_9e386.dir/build.make CMakeFiles/cmTC_9e386.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9e386.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_VFSCONF  -w  -std=gnu11 -o CMakeFiles/cmTC_9e386.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:3:33: error: storage size of ‘v’ isn’t known
+    3 | int main(void) { struct vfsconf v; return sizeof(v);}
+      |                                 ^
+gmake[1]: *** [CMakeFiles/cmTC_9e386.dir/build.make:78: CMakeFiles/cmTC_9e386.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9e386/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+#include <sys/mount.h>
+int main(void) { struct vfsconf v; return sizeof(v);}
+Performing C SOURCE FILE Test HAVE_STRUCT_XVFSCONF failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ce73a/fast && gmake  -f CMakeFiles/cmTC_ce73a.dir/build.make CMakeFiles/cmTC_ce73a.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce73a.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_XVFSCONF  -w  -std=gnu11 -o CMakeFiles/cmTC_ce73a.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:3:34: error: storage size of ‘v’ isn’t known
+    3 | int main(void) { struct xvfsconf v; return sizeof(v);}
+      |                                  ^
+gmake[1]: *** [CMakeFiles/cmTC_ce73a.dir/build.make:78: CMakeFiles/cmTC_ce73a.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ce73a/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+#include <sys/mount.h>
+int main(void) { struct xvfsconf v; return sizeof(v);}
+Performing C SOURCE FILE Test MAJOR_IN_MKDEV failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a80f9/fast && gmake  -f CMakeFiles/cmTC_a80f9.dir/build.make CMakeFiles/cmTC_a80f9.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a80f9.dir/src.c.o
+/usr/bin/gcc -DMAJOR_IN_MKDEV  -w  -std=gnu11 -o CMakeFiles/cmTC_a80f9.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:1:10: fatal error: sys/mkdev.h: No such file or directory
+    1 | #include <sys/mkdev.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_a80f9.dir/build.make:78: CMakeFiles/cmTC_a80f9.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a80f9/fast] Error 2
+
+
+Source file was:
+#include <sys/mkdev.h>
+int main() { return major(256); }
+Determining if the EFTYPE exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c2a15/fast && gmake  -f CMakeFiles/cmTC_c2a15.dir/build.make CMakeFiles/cmTC_c2a15.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2a15.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_c2a15.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘EFTYPE’ undeclared (first use in this function)
+    8 |   return ((int*)(&EFTYPE))[argc];
+      |                   ^~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_c2a15.dir/build.make:78: CMakeFiles/cmTC_c2a15.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c2a15/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <errno.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef EFTYPE
+  return ((int*)(&EFTYPE))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the D_MD_ORDER exist failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d8ca7/fast && gmake  -f CMakeFiles/cmTC_d8ca7.dir/build.make CMakeFiles/cmTC_d8ca7.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d8ca7.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_d8ca7.dir/CheckSymbolExists.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘D_MD_ORDER’ undeclared (first use in this function)
+    8 |   return ((int*)(&D_MD_ORDER))[argc];
+      |                   ^~~~~~~~~~
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_d8ca7.dir/build.make:78: CMakeFiles/cmTC_d8ca7.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_d8ca7/fast] Error 2
+
+
+File /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <langinfo.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef D_MD_ORDER
+  return ((int*)(&D_MD_ORDER))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test HAVE_STRUCT_TM___TM_GMTOFF failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0f651/fast && gmake  -f CMakeFiles/cmTC_0f651.dir/build.make CMakeFiles/cmTC_0f651.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0f651.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_TM___TM_GMTOFF  -w  -std=gnu11 -o CMakeFiles/cmTC_0f651.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:6:34: error: ‘struct tm’ has no member named ‘__tm_gmtoff’; did you mean ‘tm_gmtoff’?
+    6 |   (void)sizeof(((struct tm *)0)->__tm_gmtoff);
+      |                                  ^~~~~~~~~~~
+      |                                  tm_gmtoff
+gmake[1]: *** [CMakeFiles/cmTC_0f651.dir/build.make:78: CMakeFiles/cmTC_0f651.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_0f651/fast] Error 2
+
+
+Source file was:
+
+#include <time.h>
+
+int main()
+{
+  (void)sizeof(((struct tm *)0)->__tm_gmtoff);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATFS_F_NAMEMAX failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7c6cb/fast && gmake  -f CMakeFiles/cmTC_7c6cb.dir/build.make CMakeFiles/cmTC_7c6cb.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7c6cb.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STATFS_F_NAMEMAX  -w  -std=gnu11 -o CMakeFiles/cmTC_7c6cb.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:36: error: invalid use of undefined type ‘struct statfs’
+    7 |   (void)sizeof(((struct statfs *)0)->f_namemax);
+      |                                    ^~
+gmake[1]: *** [CMakeFiles/cmTC_7c6cb.dir/build.make:78: CMakeFiles/cmTC_7c6cb.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_7c6cb/fast] Error 2
+
+
+Source file was:
+
+#include <sys/param.h>
+#include <sys/mount.h>
+
+int main()
+{
+  (void)sizeof(((struct statfs *)0)->f_namemax);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_BIRTHTIME failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c3f89/fast && gmake  -f CMakeFiles/cmTC_c3f89.dir/build.make CMakeFiles/cmTC_c3f89.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c3f89.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_BIRTHTIME  -w  -std=gnu11 -o CMakeFiles/cmTC_c3f89.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_birthtime’
+    7 |   (void)sizeof(((struct stat *)0)->st_birthtime);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_c3f89.dir/build.make:78: CMakeFiles/cmTC_c3f89.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c3f89/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_birthtime);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c7f99/fast && gmake  -f CMakeFiles/cmTC_c7f99.dir/build.make CMakeFiles/cmTC_c7f99.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7f99.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC  -w  -std=gnu11 -o CMakeFiles/cmTC_c7f99.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_birthtimespec’
+    7 |   (void)sizeof(((struct stat *)0)->st_birthtimespec.tv_nsec);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_c7f99.dir/build.make:78: CMakeFiles/cmTC_c7f99.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c7f99/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_birthtimespec.tv_nsec);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8cbf4/fast && gmake  -f CMakeFiles/cmTC_8cbf4.dir/build.make CMakeFiles/cmTC_8cbf4.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8cbf4.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC  -w  -std=gnu11 -o CMakeFiles/cmTC_8cbf4.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_mtimespec’
+    7 |   (void)sizeof(((struct stat *)0)->st_mtimespec.tv_nsec);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_8cbf4.dir/build.make:78: CMakeFiles/cmTC_8cbf4.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8cbf4/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtimespec.tv_nsec);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_N failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_05cba/fast && gmake  -f CMakeFiles/cmTC_05cba.dir/build.make CMakeFiles/cmTC_05cba.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_05cba.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_MTIME_N  -w  -std=gnu11 -o CMakeFiles/cmTC_05cba.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:36: error: ‘struct stat’ has no member named ‘st_mtime_n’; did you mean ‘st_mtim’?
+    7 |   (void)sizeof(((struct stat *)0)->st_mtime_n);
+      |                                    ^~~~~~~~~~
+      |                                    st_mtim
+gmake[1]: *** [CMakeFiles/cmTC_05cba.dir/build.make:78: CMakeFiles/cmTC_05cba.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_05cba/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_n);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_UMTIME failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b9ca1/fast && gmake  -f CMakeFiles/cmTC_b9ca1.dir/build.make CMakeFiles/cmTC_b9ca1.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b9ca1.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_UMTIME  -w  -std=gnu11 -o CMakeFiles/cmTC_b9ca1.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:36: error: ‘struct stat’ has no member named ‘st_umtime’; did you mean ‘st_mtim’?
+    7 |   (void)sizeof(((struct stat *)0)->st_umtime);
+      |                                    ^~~~~~~~~
+      |                                    st_mtim
+gmake[1]: *** [CMakeFiles/cmTC_b9ca1.dir/build.make:78: CMakeFiles/cmTC_b9ca1.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b9ca1/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_umtime);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_USEC failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ad10/fast && gmake  -f CMakeFiles/cmTC_9ad10.dir/build.make CMakeFiles/cmTC_9ad10.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ad10.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_MTIME_USEC  -w  -std=gnu11 -o CMakeFiles/cmTC_9ad10.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_mtime_usec’
+    7 |   (void)sizeof(((struct stat *)0)->st_mtime_usec);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_9ad10.dir/build.make:78: CMakeFiles/cmTC_9ad10.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_9ad10/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_usec);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_FLAGS failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e41fb/fast && gmake  -f CMakeFiles/cmTC_e41fb.dir/build.make CMakeFiles/cmTC_e41fb.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e41fb.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_FLAGS  -w  -std=gnu11 -o CMakeFiles/cmTC_e41fb.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_flags’
+    7 |   (void)sizeof(((struct stat *)0)->st_flags);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_e41fb.dir/build.make:78: CMakeFiles/cmTC_e41fb.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e41fb/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_flags);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATVFS_F_IOSIZE failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_49a8e/fast && gmake  -f CMakeFiles/cmTC_49a8e.dir/build.make CMakeFiles/cmTC_49a8e.dir/build
+gmake[1]: Entering directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_49a8e.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STATVFS_F_IOSIZE  -w  -std=gnu11 -o CMakeFiles/cmTC_49a8e.dir/src.c.o -c /home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp/src.c:7:39: error: ‘struct statvfs’ has no member named ‘f_iosize’; did you mean ‘f_bsize’?
+    7 |   (void)sizeof(((struct statvfs *)0)->f_iosize);
+      |                                       ^~~~~~~~
+      |                                       f_bsize
+gmake[1]: *** [CMakeFiles/cmTC_49a8e.dir/build.make:78: CMakeFiles/cmTC_49a8e.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uho/vits-finetuning/cmake-3.21.0/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_49a8e/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/statvfs.h>
+
+int main()
+{
+  (void)sizeof(((struct statvfs *)0)->f_iosize);
+  return 0;
+}
+
+Checking for curses support failed with the following output:
+Change Dir: /home/uho/vits-finetuning/cmake-3.21.0/Source/Checks/Curses-build
+
+Run Build Command(s):/usr/bin/gmake -f Makefile CheckCurses && gmake: *** No rule to make target 'CheckCurses'.  Stop.
+
+
+
+Looking for a Fortran compiler failed with the following output:
+-- The Fortran compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_Fortran_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "FC" or the CMake cache entry CMAKE_Fortran_COMPILER to the full
+  path to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/uho/vits-finetuning/cmake-3.21.0/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeOutput.log".
+See also "/home/uho/vits-finetuning/cmake-3.21.0/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeError.log".
+

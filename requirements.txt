@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Cython
 librosa==0.9.1
 matplotlib
@@ -10,3 +11,17 @@ unidecode
 pyopenjtalk
 protobuf
 tqdm
+=======
+Cython
+librosa==0.9.1
+matplotlib
+numpy
+scipy
+tensorboard
+torch==1.13.1
+torchvision
+unidecode
+pyopenjtalk
+protobuf
+tqdm
+>>>>>>> 32bac73f (test.py)

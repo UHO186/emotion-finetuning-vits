@@ -15,6 +15,16 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("asyncio").setLevel(logging.WARNING)
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--device', type=str, default='cpu')
+parser.add_argument('--api', action="store_true", default=False)
+parser.add_argument("--share", action="store_true", default=False, help="share gradio app")
+parser.add_argument("--colab", action="store_true", default=False)
+parser.add_argument('-c', '--config', type=str, default="configs/config.json", help='JSON file for configuration')
+parser.add_argument('-m', '--model', type=str, required=True,  help='Model path')
+parser.add_argument('-e', '--emotion', type=str, default="all_emotions.npy", required=True,  help='Model path')
+args = parser.parse_args()
+
 def get_text(text, hps):
     text_norm= text_to_sequence(text, hps.data.text_cleaners)
     if hps.data.add_blank:
@@ -23,15 +33,18 @@ def get_text(text, hps):
     return text_norm
 
 def create_tts_fn(net_g_ms):
-    def tts_fn(text, noise_scale, noise_scale_w, length_scale, speaker_id):
+    def tts_fn(text, noise_scale, noise_scale_w, length_scale, speaker_id, emotion_id):
+        all_emotions = np.load(args.emotion)
+        emotion_id = int(emotion_id) # emotion_id를 정수로 변환합니다.
         text = text.replace('\n', ' ').replace('\r', '').replace(" ", "")
         stn_tst= get_text(text, hps_ms)
         with no_grad():
             x_tst = stn_tst.unsqueeze(0).to(device)
             x_tst_lengths = LongTensor([stn_tst.size(0)]).to(device)
             sid = LongTensor([speaker_id]).to(device)
+            emo = torch.FloatTensor(all_emotions[emotion_id]).unsqueeze(0)
             audio = net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=noise_scale, noise_scale_w=noise_scale_w,
-                                   length_scale=length_scale)[0][0, 0].data.cpu().float().numpy()
+                                length_scale=length_scale, emo=emo)[0][0, 0].data.cpu().float().numpy()
         return "Success", (22050, audio)
     return tts_fn
 
@@ -59,14 +72,6 @@ download_audio_js = """
 """
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--device', type=str, default='cpu')
-    parser.add_argument('--api', action="store_true", default=False)
-    parser.add_argument("--share", action="store_true", default=False, help="share gradio app")
-    parser.add_argument("--colab", action="store_true", default=False)
-    parser.add_argument('-c', '--config', type=str, default="configs/config.json", help='JSON file for configuration')
-    parser.add_argument('-m', '--model', type=str, required=True,  help='Model path')
-    args = parser.parse_args()
     device = torch.device(args.device)
     hps_ms = utils.get_hparams_from_file(args.config)
     models = []
@@ -90,6 +95,7 @@ if __name__ == '__main__':
                                                     elem_id=f"input-text")
                             btn = gr.Button(value="Generate", variant="primary")
                             sid = gr.Number(label="speaker_id", value=10)
+                            emo = gr.Number(label="emotion_id", value=10)
                             with gr.Row():
                                 ns = gr.Slider(label="noise_scale", minimum=0.1, maximum=1.0, step=0.1, value=0.6,
                                                interactive=True)
@@ -100,7 +106,7 @@ if __name__ == '__main__':
                             o1 = gr.Textbox(label="Output Message")
                             o2 = gr.Audio(label="Output Audio", elem_id=f"tts-audio")
                             download = gr.Button("Download Audio")
-                        btn.click(tts_fn, inputs=[input_text, ns, nsw, ls, sid], outputs=[o1, o2], api_name=f"tts")
+                        btn.click(tts_fn, inputs=[input_text, ns, nsw, ls, sid, emo], outputs=[o1, o2], api_name=f"tts")
                         download.click(None, [], [], _js=download_audio_js)
     if args.colab:
         webbrowser.open("http://127.0.0.1:7860")

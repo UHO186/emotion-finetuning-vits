@@ -1,0 +1,2 @@
+/home/uho/vits-finetuning/cmake-3.21.0/Source/Checks/Curses-build/CMakeFiles/rebuild_cache.dir
+/home/uho/vits-finetuning/cmake-3.21.0/Source/Checks/Curses-build/CMakeFiles/edit_cache.dir
