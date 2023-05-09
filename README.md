@@ -8,6 +8,10 @@ emotion-vits repo: https://github.com/innnky/emotional-vits.git
 
 emotion-embbeding: https://github.com/audeering/w2v2-how-to
 
+# 먼저 데이터 라벨링을 합니다.
+# データラベリングを最初に行います。
+<https://colab.research.google.com/drive/1Ty9rC72OJ0NF4eb4cVg0VUl-_xGGf8rz?usp=sharing>
+
 # 사용 방법은 다음과 같습니다.
 # 使用方法は以下の通りです
 (Suggestion) Python == 3.7
@@ -92,6 +96,34 @@ python train_ms.py -c configs/config.json -m checkpoints
 # emotion_embeddingで生成されたnpyファイルを入力します。
 python3 webui.py -m ex.pth -c ex.json -e ex.npy
 ```
+
+# Runpod environment setup
+
+## Terminal
+1. apt-get update
+2. apt-get install -y build-essential libssl-dev libffi-dev python3-dev
+3. wget https://cmake.org/files/v3.21/cmake-3.21.0.tar.gz
+4. tar xf cmake-3.21.0.tar.gz
+5. cd cmake-3.21.0
+6. ./bootstrap
+7. make -j4
+8. make install
+9. apt-get install unzip
+10. pip install pyopenjtalk
+11. pip install transformers
+12. pip install librosa==0.8.0
+13. pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
+
+## Notebook
+
+1. !git clone https://github.com/umjuho/emotion-finetuning-vits.git
+2. %cd emotion-finetuning-vits
+3. !pip install -r requirements.txt
+4. !python preprocess.py --text_index 2 --filelists filelists/train.txt filelists/val.txt --text_cleaners japanese_cleaners
+5. !python emotion_extract.py --filelists filelists/train.txt filelists/val.txt 
+   -> emotion_extract.py - root_path, wav, sr = librosa.load(path, sr=16000) modification
+6. !python train_ms.py -c configs/nene.json -m nene 
+    -> config/000.json, nene modification
 
 
 
