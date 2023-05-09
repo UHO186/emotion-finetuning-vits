@@ -1,3 +1,6 @@
+# 원본 레포지토리
+# 元のリポジトリー
+
 text cleaner from https://github.com/CjangCjengh/vits
 
 original repo1: https://github.com/jaywalnut310/vits
@@ -97,7 +100,8 @@ python train_ms.py -c configs/config.json -m checkpoints
 python3 webui.py -m ex.pth -c ex.json -e ex.npy
 ```
 
-# Runpod environment setup
+# Runpod 환경설정 (RTX4090에서는 cuda에러로인해 실행이 안됌)
+# Runpodの環境設定（RTX4090では、CUDAエラーのため実行できません）
 
 ## Terminal
 1. apt-get update
