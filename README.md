@@ -37,6 +37,7 @@ pip install -r requirements.txt
 - [G_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0-p.pth)
 - [D_0-p.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0-p.pth)
 
+## 데이터셋 생성
 ## データセットの作成
 - 화자 ID는 0에서 803 사이여야 합니다.(スピーカーIDは0から803の範囲内である必要があります。)
 - 약 50개의 오디오-텍스트 쌍이면 충분하며, 100~600 에포크(epoch)는 꽤 좋은 성능을 보일 수 있지만, 더 많은 데이터가 더 좋을 수도 있습니다.(約50個のオーディオ-テキストのペアがあれば十分であり、100〜600エポックはかなり良い性能を示すことができますが、より多くのデータがあればより良い結果が得られるかもしれません。)
