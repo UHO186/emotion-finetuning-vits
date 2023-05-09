@@ -8,10 +8,6 @@ emotion-vits repo: https://github.com/innnky/emotional-vits.git
 
 emotion-embbeding: https://github.com/audeering/w2v2-how-to
 
-## 온라인 학습 및 추론
-### colab
-See [vits-finetuning](https://colab.research.google.com/drive/13FF2pBWxj9rMR1SjI_JpVD6mTRN-kq--?usp=share_link)
-
 # 사용 방법은 다음과 같습니다.
 (Suggestion) Python == 3.7
 
