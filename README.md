@@ -79,3 +79,12 @@ python train.py -c configs/config.json -m checkpoints
 # Mutiple speakers
 python train_ms.py -c configs/config.json -m checkpoints
 ```
+
+## Gradio 실행
+## Gradioを実行します。
+```sh
+python3 webui.py -m ex.pth -c ex.json -e ex.npy
+```
+
+
+
