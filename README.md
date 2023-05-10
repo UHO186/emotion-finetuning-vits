@@ -175,10 +175,10 @@ pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url http
 # 損失（LOSS）グラフを確認します。
 
 - 학습을 진행하면 events.out.tfevent~~~ 와 같은 파일이 생성됩니다.
-- tensorboard --logdir <folder> --port 6006 그걸 folder에 경로를 지정합니다.
+- tensorboard --logdir checkpoint/<folder> --port 6006 그걸 folder에 경로를 지정합니다.
 ---
 - 学習を進めると、events.out.tfevent~~~というファイルが生成されます。
-- tensorboard --logdir <folder> --port 6006 folderに指定されたパスで実行します。
+- tensorboard --logdir checkpoint/<folder> --port 6006 folderに指定されたパスで実行します。
 
 # 데이터셋의 기본이 되는 성우 구하기
 # データセットの基になる声優を見つける
