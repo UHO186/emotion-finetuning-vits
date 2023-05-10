@@ -107,8 +107,8 @@ python train_ms.py -c configs/config.json -m checkpoints
 python3 webui.py -m ex.pth -c ex.json -e ex.npy
 ```
 
-# Runpod 환경설정 (RTX4090에서는 cuda에러로인해 실행이 안됌)
-# Runpodの環境設定（RTX4090では、CUDAエラーのため実行できません）
+# Runpod 환경설정
+# Runpodの環境設定
 
 ## Terminal
 ```sh
