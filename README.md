@@ -104,19 +104,23 @@ python3 webui.py -m ex.pth -c ex.json -e ex.npy
 # Runpodの環境設定（RTX4090では、CUDAエラーのため実行できません）
 
 ## Terminal
-1. apt-get update
-2. apt-get install -y build-essential libssl-dev libffi-dev python3-dev
-3. wget https://cmake.org/files/v3.21/cmake-3.21.0.tar.gz
-4. tar xf cmake-3.21.0.tar.gz
-5. cd cmake-3.21.0
-6. ./bootstrap
-7. make -j4
-8. make install
-9. apt-get install unzip
-10. pip install pyopenjtalk
-11. pip install transformers
-12. pip install librosa==0.8.0
-13. pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
+```sh
+# 순서대로 실행해주세요.
+# 以下の順序で実行してください。
+apt-get update
+apt-get install -y build-essential libssl-dev libffi-dev python3-dev
+wget https://cmake.org/files/v3.21/cmake-3.21.0.tar.gz
+tar xf cmake-3.21.0.tar.gz
+cd cmake-3.21.0
+./bootstrap
+make -j4
+make install
+apt-get install unzip
+pip install pyopenjtalk
+pip install transformers
+pip install librosa==0.8.0
+pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
+```
 
 ## Notebook
 
