@@ -43,6 +43,7 @@ pip install -r requirements.txt
 - [D_0.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0.pth)
 - "utils.py"ファイルの152行目にある "model_dir"を修正してください。
 - 事前学習済みモデルを「model_dir」/「checkpoints」ディレクトリに配置してください。
+---
 
 ### 만약 "n_speakers"를 사용자 정의하려면, 이 두 개의 사전 학습(pre-trained) 모델로 대체(replace)해주세요.
 ### もし「n_speakers」をカスタマイズしたい場合は、この2つの事前学習済みモデルで置き換えてください。
@@ -55,11 +56,12 @@ pip install -r requirements.txt
 - 약 50개의 오디오-텍스트 쌍이면 충분하며, 100~600 에포크(epoch)는 꽤 좋은 성능을 보일 수 있지만, 더 많은 데이터가 더 좋을 수도 있습니다.
 - 모든 오디오 파일을 22050Hz, 16비트, 모노 wav 파일로 리샘플링(resample)하세요.
 - 오디오 파일의 길이는 1초 이상 10초 이하여야 합니다.
-
+---
 - スピーカーIDは0から803の範囲内である必要があります。
 - 約50個のオーディオ-テキストのペアがあれば十分であり、100〜600エポックはかなり良い性能を示すことができますが、より多くのデータがあればより良い結果が得られるかもしれません。
 - すべてのオーディオファイルを22050Hz、16ビット、モノラルのwavファイルにリサンプリングしてください。
 - オーディオファイルの長さは1秒以上10秒以下である必要があります。
+---
 ```
 path/to/XXX.wav|speaker id|transcript
 ```
@@ -112,6 +114,7 @@ python3 webui.py -m ex.pth -c ex.json -e ex.npy
 ```sh
 # 순서대로 실행해주세요.
 # 以下の順序で実行してください。
+
 apt-get update
 apt-get install -y build-essential libssl-dev libffi-dev python3-dev
 wget https://cmake.org/files/v3.21/cmake-3.21.0.tar.gz
