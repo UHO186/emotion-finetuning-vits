@@ -171,5 +171,18 @@ pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url http
    config/000.json
    ```
 
+# LOSS 그래프 확인
+# 損失（LOSS）グラフを確認します。
+- 학습을 진행하면 events.out.tfevent~~~ 와 같은 파일이 생성됩니다.
+- tensorboard --logdir <folder> --port 6006 그걸 <folder>에 경로를 지정합니다.
+---
+- 学習を進めると、events.out.tfevent~~~というファイルが生成されます。
+- tensorboard --logdir <folder> --port 6006 <folder>に指定されたパスで実行します。
+
+
+
+
+
+
 
 
