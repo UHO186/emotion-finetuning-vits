@@ -123,6 +123,7 @@ python3 webui.py -m ex.pth -c ex.json -e ex.npy
 1. !git clone https://github.com/umjuho/emotion-finetuning-vits.git
 2. %cd emotion-finetuning-vits
    - 실행하기 전에 Terminal명령어를 순서대로 실행해주세요. 아니면 빌드할 때 Cmake에러가 발생합니다.
+   - 実行する前に、ターミナルコマンドを順番に実行してください。そうしないと、ビルド時にCMakeエラーが発生する可能性があります。
 4. !pip install -r requirements.txt
 5. !python preprocess.py --text_index 2 --filelists filelists/train.txt filelists/val.txt --text_cleaners japanese_cleaners
 6. !python emotion_extract.py --filelists filelists/train.txt filelists/val.txt 
