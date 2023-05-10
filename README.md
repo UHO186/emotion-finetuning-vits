@@ -142,11 +142,11 @@ pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url http
 2. ```sh
    %cd emotion-finetuning-vits
    ```
-   - 실행하기 전에 Terminal명령어를 순서대로 실행해주세요. 아니면 빌드할 때 Cmake에러가 발생합니다.
-   - 実行する前に、ターミナルコマンドを順番に実行してください。そうしないと、ビルド時にCMakeエラーが発生する可能性があります。
 3. ```sh
    !pip install -r requirements.txt
    ```
+   - 실행하기 전에 Terminal명령어를 순서대로 실행해주세요. 아니면 빌드할 때 Cmake에러가 발생합니다.
+   - 実行する前に、ターミナルコマンドを順番に実行してください。そうしないと、ビルド時にCMakeエラーが発生する可能性があります。
 4. ```sh
    !python preprocess.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
    ```
