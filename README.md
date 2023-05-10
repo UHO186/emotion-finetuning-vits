@@ -13,7 +13,11 @@ emotion-embbeding: https://github.com/audeering/w2v2-how-to
 
 # 먼저 데이터 라벨링을 합니다.
 # データラベリングを最初に行います。
-<https://colab.research.google.com/drive/1Ty9rC72OJ0NF4eb4cVg0VUl-_xGGf8rz?usp=sharing>
+- <https://colab.research.google.com/drive/1Ty9rC72OJ0NF4eb4cVg0VUl-_xGGf8rz?usp=sharing>
+- <https://coconala.com/> 에서 데이터 라벨링해줄 인력을 찾는 것도 하나의 방법입니다.
+---
+- https://coconala.com/ でデータのラベリングを手助けしてくれるスタッフを探すことも一つの方法です。
+
 
 # 사용 방법은 다음과 같습니다.
 # 使用方法は以下の通りです
