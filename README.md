@@ -125,7 +125,11 @@ python3 webui.py -m ex.pth -c ex.json -e ex.npy
 3. !pip install -r requirements.txt
 4. !python preprocess.py --text_index 2 --filelists filelists/train.txt filelists/val.txt --text_cleaners japanese_cleaners
 5. !python emotion_extract.py --filelists filelists/train.txt filelists/val.txt 
-   -> emotion_extract.py - root_path, wav, sr = librosa.load(path, sr=16000) modification
+   ```sh
+   # 이 때 rootpath를 wav파일이 저장되어있는 폴더로 지정해주세요.
+   # この場合、rootpathをwavファイルが保存されているフォルダに指定してください。
+   rootpath = "dataset/nene"
+   ```
 6. !python train_ms.py -c configs/nene.json -m nene 
     -> config/000.json, nene modification
 
