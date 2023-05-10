@@ -99,7 +99,7 @@ wavnames = []
 def extract_dir(path):
     rootpath = path
     for idx, wavname in enumerate(os.listdir(rootpath)):
-        wav, sr = librosa.load(f"{rootpath}/{wavname}", 16000)
+        wav, sr = librosa.load(f"{rootpath}/{wavname}", sr=16000)
         emb = process_func(np.expand_dims(wav, 0), sr, embeddings=True)
         embs.append(emb)
         wavnames.append(wavname)
@@ -108,13 +108,13 @@ def extract_dir(path):
 
 
 def extract_wav(path):
-    wav, sr = librosa.load(path, 16000)
+    wav, sr = librosa.load(path, sr=16000)
     emb = process_func(np.expand_dims(wav, 0), sr, embeddings=True)
     return emb
 
 
 def preprocess_one(path):
-    wav, sr = librosa.load(path, 16000)
+    wav, sr = librosa.load(path, sr=16000)
     emb = process_func(np.expand_dims(wav, 0), sr, embeddings=True)
     np.save(f"{path}.emo.npy", emb.squeeze(0))
     return emb
