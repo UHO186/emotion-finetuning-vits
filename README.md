@@ -124,13 +124,23 @@ pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url http
 
 ## Notebook
 
-1. !git clone https://github.com/umjuho/emotion-finetuning-vits.git
-2. %cd emotion-finetuning-vits
+1. ```sh
+   !git clone https://github.com/umjuho/emotion-finetuning-vits.git
+   ```
+2. ```sh
+   %cd emotion-finetuning-vits
+   ```
    - 실행하기 전에 Terminal명령어를 순서대로 실행해주세요. 아니면 빌드할 때 Cmake에러가 발생합니다.
    - 実行する前に、ターミナルコマンドを順番に実行してください。そうしないと、ビルド時にCMakeエラーが発生する可能性があります。
-4. !pip install -r requirements.txt
-5. !python preprocess.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
-6. !python emotion_extract.py --filelists filelists/train.txt filelists/val.txt 
+3. ```sh
+   !pip install -r requirements.txt
+   ```
+4. ```sh
+   !python preprocess.py --filelists filelists/filelist_train.txt filelists/filelist_val.txt
+   ```
+5. ```sh
+   !python emotion_extract.py --filelists filelists/train.txt filelists/val.txt 
+   ```
    ```sh
    # 이 때 rootpath를 wav파일이 저장되어있는 폴더로 지정해주세요.
    # この場合、rootpathをwavファイルが保存されているフォルダに指定してください。
