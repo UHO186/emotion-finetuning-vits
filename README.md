@@ -36,8 +36,13 @@ pip install -r requirements.txt
 ## 事前学習済みモデルをダウンロード
 - [G_0.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0.pth)
 - [D_0.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0.pth)
-- "utils.py" 파일의 152번 줄에 있는 "model_dir"을 수정하세요.("utils.py"ファイルの152行目にある "model_dir"を修正してください。)
-- pre-trained 모델을 "model_dir"/checkpoints 디렉토리에 넣으세요.(事前学習済みモデルを「model_dir」/「checkpoints」ディレクトリに配置してください。)
+- "utils.py" 파일의 152번 줄에 있는 "model_dir"을 수정하세요.
+- pre-trained 모델을 "model_dir"/checkpoints 디렉토리에 넣으세요.
+
+- [G_0.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/G_0.pth)
+- [D_0.pth](https://huggingface.co/spaces/sayashi/vits-uma-genshin-honkai/resolve/main/model/D_0.pth)
+- "utils.py"ファイルの152行目にある "model_dir"を修正してください。
+- 事前学習済みモデルを「model_dir」/「checkpoints」ディレクトリに配置してください。
 
 ### 만약 "n_speakers"를 사용자 정의하려면, 이 두 개의 사전 학습(pre-trained) 모델로 대체(replace)해주세요.
 ### もし「n_speakers」をカスタマイズしたい場合は、この2つの事前学習済みモデルで置き換えてください。
