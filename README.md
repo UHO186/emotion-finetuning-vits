@@ -137,7 +137,7 @@ pip3 install torch==1.13.1 torchvision torchaudio==0.13.1 --extra-index-url http
 ## Notebook
 
 1. ```sh
-   !git clone https://github.com/umjuho/emotion-finetuning-vits.git
+   !git clone https://github.com/UHO186/emotion-finetuning-vits.git
    ```
 2. ```sh
    %cd emotion-finetuning-vits
