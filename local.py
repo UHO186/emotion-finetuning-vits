@@ -18,7 +18,9 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("asyncio").setLevel(logging.WARNING)
 
-openai.api_key = ""  # 앞서 생성한 API 키를 입력하세요
+openai.api_key = (
+    ""  # 앞서 생성한 API 키를 입력하세요
+)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--device", type=str, default="cpu")
@@ -79,36 +81,36 @@ def create_tts_fn(net_g_ms):
     return tts_fn
 
 
-# 마이크로폰에서 음성 입력 받기
-def listen_microphone():
-    with sr.Microphone() as source:
-        print("Listening...")
-        audio = r.listen(source)
+# # 마이크로폰에서 음성 입력 받기
+# def listen_microphone():
+#     with sr.Microphone() as source:
+#         print("Listening...")
+#         audio = r.listen(source)
 
-    return audio
-
-
-# 음성을 텍스트로 변환
-def transcribe_audio(audio):
-    try:
-        text = r.recognize_google(audio, language="en-US")
-        return text
-    except sr.UnknownValueError:
-        print("음성을 인식할 수 없습니다.")
-    except sr.RequestError as e:
-        print(f"음성 변환에 에러가 발생했습니다: {e}")
+#     return audio
 
 
-# 실시간 음성을 텍스트로 변환
-def real_time_transcription():
-    while True:
-        audio = listen_microphone()
-        text = transcribe_audio(audio)
-        if text:
-            return text
+# # 음성을 텍스트로 변환
+# def transcribe_audio(audio):
+#     try:
+#         text = r.recognize_google(audio, language="en-US")
+#         return text
+#     except sr.UnknownValueError:
+#         print("음성을 인식할 수 없습니다.")
+#     except sr.RequestError as e:
+#         print(f"음성 변환에 에러가 발생했습니다: {e}")
 
-        # 종료 조건을 설정하고 싶다면 여기에 추가하세요
-        # 예: if text == "종료": break
+
+# # 실시간 음성을 텍스트로 변환
+# def real_time_transcription():
+#     while True:
+#         audio = listen_microphone()
+#         text = transcribe_audio(audio)
+#         if text:
+#             return text
+
+#         # 종료 조건을 설정하고 싶다면 여기에 추가하세요
+#         # 예: if text == "종료": break
 
 
 # 음성 재생
@@ -116,18 +118,12 @@ def play_audio(audio, sample_rate):
     sd.play(audio, sample_rate)
     sd.wait()
 
+    # r = sr.Recognizer()
+
+    # real_time_text = real_time_transcription()
+
 
 if __name__ == "__main__":
-    r = sr.Recognizer()
-
-    real_time_text = real_time_transcription()
-
-    response = openai.Completion.create(
-        engine="text-davinci-003",  # 사용할 엔진을 선택하세요 (예: text-davinci-003)
-        prompt=real_time_text,
-        max_tokens=50,
-    )
-    answer = response.choices[0].text.strip()
     device = torch.device(args.device)
     hps_ms = utils.get_hparams_from_file(args.config)
     net_g_ms = SynthesizerTrn(
@@ -175,6 +171,13 @@ if __name__ == "__main__":
     ):
         print("Real-time speech synthesis started. Press Ctrl+C to exit.")
         while True:
+            response = openai.Completion.create(
+                engine="text-davinci-003",
+                prompt="こんにちは！",
+                max_tokens=50,
+            )
+            answer = response.choices[0].text.strip()
+
             text = answer
             if text == "q":
                 break
